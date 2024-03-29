@@ -44,12 +44,12 @@
 		</setters>
 		<rules>
             <grant type="Size" id="ID_SIZE_MEDIUM"/>
-			<stat name="dexterity" value="1" alt="Fishman"/>
+			<stat name="dexterity" value="1" alt="Sky Islander"/>
 			<stat  name="innate speed" value="30" bonus="base"/>
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
             <grant type="Racial Trait" name="Protection of the Clouds" id="ID_OP_RACIAL_TRAIT_SKY_ISLANDER_PROTECTION_OF_THE_CLOUDS" /> 
 			<grant type="Racial Trait" name="Dial Proficiency" id="ID_OP_RACIAL_TRAIT_SKY_ISLANDER_DIAL_PROFICIENCY" /> 
-            <grant type="Racial Trait" name="Fishman Subrace" id="ID_OP_RACIAL_TRAIT_SKY_ISLANDER_SUBRACE" /> 
+            <grant type="Racial Trait" name="Sky Islander Subrace" id="ID_OP_RACIAL_TRAIT_SKY_ISLANDER_SUBRACE" /> 
 		</rules>
 	</element>
 
@@ -66,57 +66,46 @@
 		</rules>
     </element>
 
-    <element name="Adapted to the Sea" type="Racial Trait" source="One Piece Homebrew" id="ID_OP_RACIAL_TRAIT_FISHMAN_ADAPTED_TO_THE_SEA">
+	<element name="Dial Proficiency" type="Racial Trait" source="One Piece Homebrew" id="ID_OP_RACIAL_TRAIT_SKY_ISLANDER_DIAL_PROFICIENCY">
         <description>
-            <p>With the ability to adapt to extreme underwater depths, you have Resistance to cold damage.</p>
-
-            <h5>Aasimar Celestial Features</h5>
-			<table>
-				<thead>
-					<tr><td>d6</td><td>Celestial Feature</td></tr>
-				</thead>
-				<tr><td>1</td><td>A dusting of metallic, white, or charcoal freckles</td></tr>
-				<tr><td>2</td><td>Metallic, luminous, or dark eyes</td></tr>
-				<tr><td>3</td><td>Starkly colored hair</td></tr>
-				<tr><td>4</td><td>An unusual hue tinting your shadow</td></tr>
-				<tr><td>5</td><td>A ghostly halo crowning your head</td></tr>
-				<tr><td>6</td><td>Rainbows gleaming on your skin</td></tr>
-			</table>
+            <p>You innately understand dials that have came from sky islands and can carry one with you. Roll once on the Simple Dial Table in Chapter 5 to determine which one you start with.</p>
         </description>
         <sheet>
-            <description>You have Resistance to cold damage. And can breathe air and water.</description>
+            <description>You innately understand dials that have came from sky islands and can carry one with you.</description>
         </sheet>
-		<rules>
-			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
-		</rules>
     </element>
 
-    <element name="Fishman Subrace" type="Racial Trait" source="One Piece Homebrew" id="ID_OP_RACIAL_TRAIT_FISHMAN_SUBRACE">
+
+    <element name="Sky Islander Subrace" type="Racial Trait" source="One Piece Homebrew" id="ID_OP_RACIAL_TRAIT_SKY_ISLANDER_SUBRACE">
 		<description>
-			<p>Breeding among fish-people resulted in four main subraces: Shark, Manta Ray, Octopus, or Smelt-Whiting variants.<br /></p>
+			<p>The separation of groups living on the "Fairy Vearth" resulted in three main subraces splitting off: Shandian, Birkan, or Skypiean variants. Choose one of these Subraces and add its traits to your racial features alongside the ones listed above. <br /></p>
 		</description>
 		<sheet display="false"/>
 		<rules>
-			<select type="Sub Race" name="Fishman Subrace" supports="Fishman" />
+			<select type="Sub Race" name="Sky Islander Subrace" supports="Sky Islander" />
 		</rules>
 	</element>
 
 
-    <element name="Shark" type="Sub Race" source="One Piece Homebrew" id="ID_OP_SUB_RACE_FISHMAN_SHARK">
-		<supports>Fishman</supports>
+    <element name="Shandian" type="Sub Race" source="One Piece Homebrew" id="ID_OP_SUB_RACE_SKY_ISLANDER_SHANDIAN">
+		<supports>Sky Islander</supports>
 		<description>
-			<p>These fish-men are known to have sharp shark-like teeth, light blue-tinted skin, large back fins, and extreme strength. </p>
+			<p>Your Shandian heritage has gifted you with great strength and combat expertise. </p>
 			<p>     
 				<span class="feature">Ability Score Increase.</span> Your Strength score increases by 2.<br />
-				<span class="feature">Apex Predtaor.</span>You gain proficiency in the Charisma (Intimidation).<br />
-				<span class="feature">Bite.</span>Your razor-sharp teeth are a natural weapon, which you can use to make unarmed strikes. If you hit with it, you deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an Unarmed Strike.<br />
+				<span class="feature">Shandian Weapon Training.</span>You have proficiency with the quarterstaff, halberd, pike, glaive, spear, and heavy firearms.<br />
 			</p>  
 		</description>
 		<sheet display="false"/>
 		<rules>
-			<stat name="strength" value="2" alt="Shark Fishman"/>
-			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
-			<grant type="Racial Trait" id="ID_OP_RACIAL_TRAIT_FISHMAN_SHARK_BITE" />
+			<stat name="strength" value="2" alt="Shandian Fishman"/>
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_QUARTERSTAFF" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_HALBERD" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_FLAIL" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_PIKE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_GLAIVE" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SPEAR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_FIREARM" />
 		</rules>
 	</element>
 
